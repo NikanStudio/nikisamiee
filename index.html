@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -28,12 +29,14 @@
 
     <link
         rel="stylesheet"
-        href="style.css"
+        href="style.css?v=2"
     >
+
 </head>
 
 
 <body>
+
 
     <!-- ==============================
          HEADER
@@ -50,6 +53,7 @@
                 💜 نیکی فمیلی
             </a>
 
+
             <button
                 type="button"
                 id="createTopicButton"
@@ -62,13 +66,13 @@
     </header>
 
 
+
     <!-- ==============================
          MAIN
     =============================== -->
 
     <main class="container">
 
-        <!-- معرفی سایت -->
 
         <section class="hero">
 
@@ -84,7 +88,8 @@
         </section>
 
 
-        <!-- جستجو -->
+
+        <!-- SEARCH -->
 
         <section class="search-section">
 
@@ -101,7 +106,8 @@
         </section>
 
 
-        <!-- عنوان تاپیک‌ها -->
+
+        <!-- TOPICS TITLE -->
 
         <section class="topics-title">
 
@@ -116,7 +122,8 @@
         </section>
 
 
-        <!-- لیست تاپیک‌ها -->
+
+        <!-- TOPICS -->
 
         <section
             id="topics"
@@ -124,12 +131,15 @@
         >
 
             <div class="loading">
+
                 در حال دریافت تاپیک‌ها...
+
             </div>
 
         </section>
 
     </main>
+
 
 
     <!-- ==============================
@@ -144,6 +154,7 @@
 
         <div class="modal-content">
 
+
             <button
                 type="button"
                 id="closeTopicModal"
@@ -153,9 +164,11 @@
                 ×
             </button>
 
+
             <h2>
                 ساخت تاپیک جدید
             </h2>
+
 
 
             <label for="username">
@@ -170,6 +183,7 @@
             >
 
 
+
             <label for="topicTitle">
                 عنوان تاپیک
             </label>
@@ -180,6 +194,7 @@
                 maxlength="150"
                 placeholder="عنوان تاپیک"
             >
+
 
 
             <label for="topicText">
@@ -194,6 +209,7 @@
             ></textarea>
 
 
+
             <button
                 type="button"
                 id="submitTopicButton"
@@ -204,6 +220,7 @@
         </div>
 
     </div>
+
 
 
     <!-- ==============================
@@ -218,6 +235,7 @@
 
         <div class="modal-content topic-view">
 
+
             <button
                 type="button"
                 id="closeTopicView"
@@ -228,16 +246,14 @@
             </button>
 
 
-            <!-- اطلاعات تاپیک -->
 
             <article id="topicContent">
-
-                <!-- JavaScript این قسمت را پر می‌کند -->
 
             </article>
 
 
-            <!-- پاسخ‌ها -->
+
+            <!-- REPLIES -->
 
             <section class="replies-section">
 
@@ -245,22 +261,23 @@
                     پاسخ‌ها
                 </h3>
 
-                <div id="replies">
 
-                    <!-- پاسخ‌ها اینجا نمایش داده می‌شوند -->
+                <div id="replies">
 
                 </div>
 
             </section>
 
 
-            <!-- ارسال پاسخ -->
+
+            <!-- REPLY FORM -->
 
             <section class="reply-form">
 
                 <h3>
                     ارسال پاسخ
                 </h3>
+
 
 
                 <label for="replyName">
@@ -275,6 +292,7 @@
                 >
 
 
+
                 <label for="replyText">
                     پاسخ شما
                 </label>
@@ -285,6 +303,7 @@
                     rows="5"
                     placeholder="پاسخ خود را بنویسید..."
                 ></textarea>
+
 
 
                 <button
@@ -301,6 +320,7 @@
     </div>
 
 
+
     <!-- ==============================
          FOOTER
     =============================== -->
@@ -313,6 +333,7 @@
                 © 2026 نیکی فمیلی
             </p>
 
+
             <p>
                 ساخته شده توسط NIKAN STUDIO 💜
             </p>
@@ -322,11 +343,13 @@
     </footer>
 
 
+
     <!-- ==============================
          JAVASCRIPT
     =============================== -->
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
+
 
 </body>
 
