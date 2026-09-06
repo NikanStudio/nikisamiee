@@ -1,0 +1,622 @@
+/* =========================================
+   NIKI FAMILY
+   Main Styles
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    background: #f7f3fb;
+    color: #24202a;
+    line-height: 1.8;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    background: #6c35a8;
+    color: white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+}
+
+.header-inner {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#createTopicButton {
+    border: none;
+
+    background: white;
+    color: #6c35a8;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+#createTopicButton:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    text-align: center;
+
+    padding: 45px 10px 30px;
+}
+
+.hero h1 {
+    color: #542487;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #6f6877;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-section {
+    margin-bottom: 25px;
+}
+
+.search-section label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.search-section input {
+    width: 100%;
+
+    border: 1px solid #ddd2e8;
+
+    background: white;
+
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.search-section input:focus {
+    border-color: #8d55c2;
+
+    box-shadow:
+        0 0 0 3px rgba(108, 53, 168, 0.10);
+}
+
+
+/* =========================================
+   TOPICS TITLE
+========================================= */
+
+.topics-title {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.topics-title h2 {
+    font-size: 22px;
+
+    color: #3e294e;
+}
+
+#topicCount {
+    color: #765b88;
+
+    background: #eee5f5;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TOPICS LIST
+========================================= */
+
+.topics-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-height: 100px;
+}
+
+.topic-card {
+    background: white;
+
+    border: 1px solid #e7ddef;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 3px 12px rgba(70, 35, 100, 0.06);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.topic-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(70, 35, 100, 0.10);
+}
+
+.topic-card h3 {
+    color: #5b2b8d;
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+}
+
+.topic-meta {
+    color: #8b8192;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.topic-preview {
+    color: #514b56;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.empty,
+.loading {
+    background: white;
+
+    border: 1px dashed #d9c9e5;
+
+    border-radius: 15px;
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    color: #817788;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 1000;
+
+    inset: 0;
+
+    background: rgba(28, 17, 38, 0.60);
+
+    padding: 20px;
+
+    overflow-y: auto;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px 22px;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.20);
+}
+
+.modal-content h2 {
+    color: #542487;
+
+    margin-bottom: 22px;
+}
+
+.close-button {
+    position: absolute;
+
+    top: 10px;
+    left: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1eaf5;
+
+    color: #5c4568;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    transition: 0.2s;
+}
+
+.close-button:hover {
+    background: #e7d9ef;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.modal-content label,
+.reply-form label {
+    display: block;
+
+    margin-top: 14px;
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #44394b;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+
+    border: 1px solid #ddd2e8;
+
+    border-radius: 11px;
+
+    padding: 12px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: #fff;
+
+    transition: 0.2s;
+}
+
+.modal-content textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+    border-color: #8d55c2;
+
+    box-shadow:
+        0 0 0 3px rgba(108, 53, 168, 0.10);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+#submitTopicButton,
+#submitReplyButton {
+    width: 100%;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    padding: 13px;
+
+    background: #6c35a8;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+#submitTopicButton:hover,
+#submitReplyButton:hover {
+    background: #58258e;
+}
+
+
+/* =========================================
+   TOPIC VIEW
+========================================= */
+
+.topic-view {
+    max-width: 700px;
+}
+
+#topicContent {
+    padding-top: 8px;
+}
+
+.topic-main-title {
+    color: #542487;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.topic-author {
+    color: #887c90;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+.topic-body {
+    white-space: pre-wrap;
+
+    word-break: break-word;
+
+    background: #faf8fc;
+
+    border: 1px solid #eee6f3;
+
+    border-radius: 12px;
+
+    padding: 17px;
+
+    color: #3f3943;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   REPLIES
+========================================= */
+
+.replies-section {
+    border-top: 1px solid #eee5f2;
+
+    padding-top: 20px;
+
+    margin-top: 20px;
+}
+
+.replies-section h3,
+.reply-form h3 {
+    color: #542487;
+
+    margin-bottom: 14px;
+}
+
+.reply {
+    background: #f8f4fb;
+
+    border: 1px solid #e9dff0;
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+    margin-bottom: 10px;
+}
+
+.reply strong {
+    display: block;
+
+    color: #5b2b8d;
+
+    font-size: 14px;
+}
+
+.reply small {
+    display: block;
+
+    color: #93899a;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+.reply div {
+    white-space: pre-wrap;
+
+    word-break: break-word;
+
+    color: #4c4650;
+
+    font-size: 14px;
+}
+
+.reply-form {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eee5f2;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    margin-top: 50px;
+
+    padding: 25px 10px;
+
+    text-align: center;
+
+    background: #eee6f3;
+
+    color: #766b7d;
+
+    font-size: 12px;
+}
+
+.site-footer p + p {
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header-inner {
+        min-height: 62px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    #createTopicButton {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 32px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .topics-title h2 {
+        font-size: 19px;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        margin: 25px auto;
+
+        padding: 25px 15px;
+    }
+
+    .topic-main-title {
+        font-size: 21px;
+    }
+  }
