@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>نیکی فمیلی | انجمن نیکی سمیعی</title>
+
+    <meta
+        name="description"
+        content="نیکی فمیلی؛ انجمن طرفداران نیکی سمیعی برای گفتگو، ساخت تاپیک و ارسال پاسخ."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://nikanstudio.github.io/nikisamiee/"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a
+                href="#"
+                class="logo"
+            >
+                💜 نیکی فمیلی
+            </a>
+
+            <button
+                type="button"
+                id="createTopicButton"
+            >
+                + ساخت تاپیک
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="container">
+
+        <!-- معرفی سایت -->
+
+        <section class="hero">
+
+            <h1>
+                انجمن نیکی فمیلی
+            </h1>
+
+            <p>
+                اینجا می‌تونی با بقیه درباره نیکی سمیعی
+                گفتگو کنی و تاپیک بسازی 💜
+            </p>
+
+        </section>
+
+
+        <!-- جستجو -->
+
+        <section class="search-section">
+
+            <label for="searchInput">
+                جستجو
+            </label>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="عنوان یا متن تاپیک را جستجو کنید..."
+            >
+
+        </section>
+
+
+        <!-- عنوان تاپیک‌ها -->
+
+        <section class="topics-title">
+
+            <h2>
+                آخرین تاپیک‌ها
+            </h2>
+
+            <span id="topicCount">
+                ۰ تاپیک
+            </span>
+
+        </section>
+
+
+        <!-- لیست تاپیک‌ها -->
+
+        <section
+            id="topics"
+            class="topics-list"
+        >
+
+            <div class="loading">
+                در حال دریافت تاپیک‌ها...
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         CREATE TOPIC MODAL
+    =============================== -->
+
+    <div
+        id="topicModal"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content">
+
+            <button
+                type="button"
+                id="closeTopicModal"
+                class="close-button"
+                aria-label="بستن"
+            >
+                ×
+            </button>
+
+            <h2>
+                ساخت تاپیک جدید
+            </h2>
+
+
+            <label for="username">
+                نام شما
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                maxlength="50"
+                placeholder="نام خود را وارد کنید"
+            >
+
+
+            <label for="topicTitle">
+                عنوان تاپیک
+            </label>
+
+            <input
+                type="text"
+                id="topicTitle"
+                maxlength="150"
+                placeholder="عنوان تاپیک"
+            >
+
+
+            <label for="topicText">
+                متن تاپیک
+            </label>
+
+            <textarea
+                id="topicText"
+                maxlength="5000"
+                rows="7"
+                placeholder="متن تاپیک خود را بنویسید..."
+            ></textarea>
+
+
+            <button
+                type="button"
+                id="submitTopicButton"
+            >
+                ساخت تاپیک
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         VIEW TOPIC MODAL
+    =============================== -->
+
+    <div
+        id="topicViewModal"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content topic-view">
+
+            <button
+                type="button"
+                id="closeTopicView"
+                class="close-button"
+                aria-label="بستن"
+            >
+                ×
+            </button>
+
+
+            <!-- اطلاعات تاپیک -->
+
+            <article id="topicContent">
+
+                <!-- JavaScript این قسمت را پر می‌کند -->
+
+            </article>
+
+
+            <!-- پاسخ‌ها -->
+
+            <section class="replies-section">
+
+                <h3>
+                    پاسخ‌ها
+                </h3>
+
+                <div id="replies">
+
+                    <!-- پاسخ‌ها اینجا نمایش داده می‌شوند -->
+
+                </div>
+
+            </section>
+
+
+            <!-- ارسال پاسخ -->
+
+            <section class="reply-form">
+
+                <h3>
+                    ارسال پاسخ
+                </h3>
+
+
+                <label for="replyName">
+                    نام شما
+                </label>
+
+                <input
+                    type="text"
+                    id="replyName"
+                    maxlength="50"
+                    placeholder="نام شما"
+                >
+
+
+                <label for="replyText">
+                    پاسخ شما
+                </label>
+
+                <textarea
+                    id="replyText"
+                    maxlength="2000"
+                    rows="5"
+                    placeholder="پاسخ خود را بنویسید..."
+                ></textarea>
+
+
+                <button
+                    type="button"
+                    id="submitReplyButton"
+                >
+                    ارسال پاسخ
+                </button>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 نیکی فمیلی
+            </p>
+
+            <p>
+                ساخته شده توسط NIKAN STUDIO 💜
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
